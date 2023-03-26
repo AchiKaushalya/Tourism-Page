@@ -1,0 +1,143 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lookout Lodge Villas - Best Villas In Srilanka</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link href="buyProducts_styles.css" rel="stylesheet">
+<script src="buyProducts_js.js" async></script>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images\logo.jpeg"></a>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="Home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="book us.html">BOOK US</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+            <h1>Book A Room</h1>
+    </section>
+    <h1 id="up" class="blockspace2">Welcome To Our Villa !</h1>
+	<div style="font-size: 20px;">
+		<p>Looking for the most suitable room?</p>
+		<p>Here, you can find the available rooms and their prices!</p>
+		<p>Happy Weekend!</p>
+	</div>
+	<form name="buyProducts" id="form">
+		<fieldset class="productsSection" id="bbSection">
+			<legend class="blockspace">Our Rooms</legend>
+			
+			<div class="product">
+				<img src="images/Double room.jpg" alt="Double Room" width="200" height="200">
+				<div class="desc">Double Room</div>
+				<div class="desc">24 000 lkr</div>
+				<button type="button" onclick = "addcart()"  class="addToCart">Book</button>
+			</div>
+
+			<div class="product">
+				<img src="images/Single Room.jpg" alt="Single Room" width="200" height="200">
+				<div class="desc">Single Room</div>
+				<div class="desc">14 000 Lkr</div>
+				
+				<button type="button" class="addToCart">Book</button>
+			</div>
+
+			<div class="product">
+				<img src="images/VIP Suite.jpg" alt="VIP Suite" width="200" height="200"
+					style="object-fit: cover;">
+				<div class="desc">VIP Suite</div>
+				<div class="desc">44 000 lkr</div>
+				
+				<button type="button" class="addToCart">Book</button>
+			</div>
+		</fieldset>
+
+		
+
+		<fieldset class="details" id="buyerDetails">
+			<legend class="blockspace">Payment</legend>
+			<label for="country">Country</label>
+			<input type="text" name="country" id="country"><br><br>
+			<label for="fName">First Name</label>
+			<input type="text" name="fName" id="fName"><br><br>
+			<label for="lName">Last Name</label>
+			<input type="text" name="lName" id="lName"><br><br>
+			<label for="address">Street Address</label>
+			<input type="text" name="address" id="address"><br><br>
+			<label for="city">City</label>
+			<input type="text" name="city" id="city"><br><br>
+			<label for="zipCode">ZIP Code</label>
+			<input type="number" name="zipCode" id="zipCode"><br><br>
+			<label for="email">Email Address</label>
+			<input type="email" name="email" id="email" placeholder="name@example.com"><br><br>
+
+			<fieldset class="pay">
+				<legend>Payment Details</legend>
+				<p style="text-align: left; padding: 5px">Choose Card</p>
+				<label>
+					<input type="radio" name="cardType" id="visa" value="visa">
+					<img src="images/visa.png" alt="Visa Logo" width="45" height="25">
+				</label>
+				<label>
+					<input type="radio" name="cardType" id="master" value="master">
+					<img src="images/Mastercard_logo.jpg" alt="Mastercard Logo" width="45" height="25">
+				</label>
+				<label>
+					<input type="radio" name="cardType" id="amExp" value="amExp">
+					<img src="images/americanexpress.jpg" alt="American Express Logo" width="45" height="25">
+				</label>
+				<br><br><br>
+				<label for="cardName">Name on card</label>
+				<input type="text" name="cardName" id="cardName"><br><br>
+				<label for="cardNo">Card Number</label>
+				<input type="password" name="cardNo" id="cardNo"><br><br>
+				<label for="expDate">Expiry Date</label>
+				<input type="month" name="expDate" id="expDate" min="2021-01"><br><br>
+				<label for="securityNo" class="spacing">Security Code</label>
+				<input type="password" name="securityNo" id="securityNo" size="5">
+			</fieldset>
+			<br />
+			<div class="cartTotal">
+				<strong>TOTAL</strong><br />
+				<span class="cartTotalPrice">$</span><br><br>
+				<button type="reset" style="background-color: #c8b164; border-radius: 6% ;">Clear Order</button>
+				<button style="background-color: #c8b164; border-radius: 6% ;">Place Order</button>
+			</div>
+		</fieldset>
+
+	</form>
+
+	
+
+	
+
+	
+    
+    
+
+<!----JavaScript for toggle menu---->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+	
+</script>  
+    
+</body>
+</html>    

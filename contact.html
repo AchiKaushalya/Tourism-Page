@@ -1,0 +1,228 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lookout Lodge Villas - Best Villas In Srilanka</title>
+<link rel="stylesheet" href="style1.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <div id="contact-popup" style=" z-index: 10; position: fixed; display: none ; width: 100%; height: 100%; padding: 40px; background: #eee;">
+    <div style=" display:flex ; height: 100%; flex-direction:column; justify-content: center; align-items: center;">
+        <div id="popup-body" style="padding: 20px">
+
+        </div>
+
+        <div id="popup-actions">
+            <button class="hero-btn red-btn" onclick="editContact()" >Edit</button>
+            <button class="hero-btn red-btn" onclick="sendMessage()">Send Message</button>
+        </div>
+    </div>
+       
+    </div>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/logo.jpeg"></a>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="Home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="book us.html">BOOK US</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+            <h1 style="font-size: 28px;">CONTACT US</h1>
+    </section>
+    
+    
+<!------- Contact Us ------->
+
+    
+
+    
+    <section class="contact-us">
+            <div class="row">
+                <div class="contact-col">
+                    <div>
+                        <i class="fa fa-home"></i>
+                        <span>
+                            <h5>Sri Mandir Building</h5>
+                            <p>Dehiwala Mt Lavinia, Srilanka</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <span>
+                            <h5>+94 114762896</h5>
+                            <p>24 Hour Customer Service</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope-o"></i>
+                        <span>
+                            <h5>Lookoutedgevillas@outlook.com</h5>
+                            <p>Email us your query</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="contact-col">
+                    <form method="post" action="" onSubmit="onSubmit()">
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <input type="email" id="email" name="email" placeholder="Enter email address">
+
+                    <div style="margin-top:10px">
+                        <label >Subject</label>
+                    </div>
+            
+                    <div style="display: flex; margin-bottom: 0px;">
+                        <div style="display: flex; align-items: flex-start; padding: 0px 20px 10px 10px;">
+                            <label name="booking">Booking</label>
+                            <input type="radio" checked style="margin-top:3px; margin-left: 5px;" value="booking" name="subject">
+                        </div>
+                        <div style="display: flex; align-items: flex-start; padding: 0px 20px 10px 10px;">
+                            <label name="refund">Refund</label>
+                            <input type="radio" style="margin-top:3px; margin-left: 5px;" value="refund" name="subject">
+                        </div>
+
+                        <div style="display: flex; align-items: flex-start; padding: 0px 20px 10px 10px;">
+                            <label name="cancellation">Cancellation</label>
+                            <input type="radio" style="margin-top:3px; margin-left: 5px;" value="cancellation" name="subject">
+                        </div>
+
+                        <div style="display: flex; align-items: flex-start; padding: 0px 20px 10px 10px;">
+                            <label name="other">Other</label>
+                            <input type="radio" style="margin-top:3px; margin-left: 5px;" value="other" name="subject">
+                        </div>
+                    </div>
+                    
+                    <textarea rows="8" id="details" name="details" placeholder="Details"></textarea>
+                    <button type="submit" class="hero-btn red-btn">View Query</button>
+                    </form> 
+                </div>
+            </div>
+    </section>
+    
+<!-------- footer ---------->
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>We are the most reputed best villa chain in srilanka with superior customer satifaction<br>Since 1936 next level hospitility passing through genaration to genaration.</p>
+    <div class="icons">
+        <a i class="fa fa-facebook"></i></a>
+        <a i class="fa fa-twitter"></i></a>
+        <a i class="fa fa-instagram"></i></a>
+        <a i class="fa fa-linkedin"></i></a>
+        
+    </div>
+    <a  class="footer-link"><p>Lookout Lodge villas <i class="fa fa-heart-o"></i> Since 1939</p></a>
+</section>    
+
+  <!----JavaScript for menu---->
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+
+    function onSubmit(){
+        window.event.preventDefault();
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let details = document.getElementById("details").value;
+        let popUp = document.getElementById("contact-popup");
+        let popUpBody = document.getElementById("popup-body");
+
+        let subjectList = document.getElementsByName("subject");
+        let subject = "";
+
+        for(let i=0; i < subjectList.length; i++){
+            if(subjectList[i].checked){
+                subject = subjectList[i].value;
+                break;
+            }
+        }
+
+        var error = "";
+        var info = "";
+        
+        if(!isRequiredField(name)){
+            error = "Name is required. \n";
+        }
+
+        if(!isRequiredField(email)){
+            error += "Email is required. \n";
+        }
+
+        if(!isRequiredField(subject)){
+            error += "Subject is required. \n";
+        }
+        if(!isRequiredField(details)){
+            error += "Detail is required. \n";
+        }
+
+        if(error.length > 0){
+            alert(error);
+            return false;
+        }
+
+        info = `Name : ${name} </br>`;
+        info += `Email : ${email} </br>`;
+        info += `Subject : ${subject} </br>`;
+        info += `Details : ${details} </br>`;
+        
+        
+        popUpBody.innerHTML = info;
+        popUp.style.display = "inherit";
+
+    }
+
+    function editContact(){
+        let popUp = document.getElementById("contact-popup");
+        let popUpBody = document.getElementById("popup-body");
+        popUpBody.innerHTML = "";
+        popUp.style.display = "none";
+    }
+
+    function sendMessage(){
+        console.log("called")
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let details = document.getElementById("details");
+        let popUp = document.getElementById("contact-popup");
+        let popUpBody = document.getElementById("popup-body");
+
+        let subjectList = document.getElementsByName("subject");
+
+        name.value = "";
+        email.value = "";
+        details.value ="";
+
+        subjectList[0].setAttribute("checked", true);
+        popUp.style.display = "none";
+        popUpBody.innerHTML = "";
+    }
+
+    function isRequiredField(str){
+        str = str.trim();
+
+        if(str != null && str.length == 0){
+            return false;
+        }
+        return true;
+    }
+</script> 
+
+    
+</body>
+</html>    

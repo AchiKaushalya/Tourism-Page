@@ -1,0 +1,216 @@
+body {
+    background-color: #424646;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+h1 {
+text-align: center;
+}
+
+p{
+text-align: center;
+}
+
+fieldset {
+border: 3px outset #faf9f6;
+border-radius: 10px;
+}
+
+legend {
+font-size: 20px;
+margin: auto;
+padding: 10px;
+}
+
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+table {	
+margin: 40px 20px 20px 20px;
+}
+
+th, td {
+width: 95px;
+text-align: center;
+}
+
+th {
+padding: 10px;
+font-size: 20px;
+}
+
+td {
+background-color: #000000;
+text-align: center;
+color: #fff;
+}
+
+.product {
+float: left;
+padding: 15px;
+border: 2px solid #f7f7f7;
+border-radius: 3%;
+margin: 10px;
+background-color: #8e9dac;
+width: 234px;
+}
+
+.details {
+float: right;
+width: 30%;
+margin: 20px;
+}
+
+input {
+background-color: #2c4d6f;
+color: #fff;
+border: 1px inset white;
+border-radius: 5px;
+padding: 5px;
+}
+
+label {
+width: 100px;
+padding: 10px 5px;
+float: left;
+}
+
+.productsSection {
+width: 69.4%;
+margin: auto;
+background-color: #414344;
+}
+
+.desc {
+font-size: 18px;
+padding-top: 5px;
+text-align: center;
+}
+
+.addToCart {
+float: right;
+}
+
+.pay {
+width: 342px;
+margin: auto;
+}
+
+select {
+background-color: #fff;
+color: #000;
+border-radius: 8px;
+cursor: pointer;
+padding: 5px;
+}
+
+.shoppingCart {
+float: right;
+border: 1px inset red;
+padding: 10px;
+}
+
+a {
+color: #fff;
+}
+
+.removeItem {
+padding: 10px;
+background-color: #cfc8c8;
+}
+
+input[type=radio] + img {
+cursor: pointer;
+}
+
+input[type=radio] {
+position: absolute;
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+input[type=radio]:checked + img {
+outline: 3px solid #aba5a8;
+}
+
+button {
+cursor: pointer;
+padding: 10px;
+}
+
+.cartTotal {
+margin-left: 20px;
+}
+
+#itemsInvoice {
+visibility: hidden;
+font-size: 20px;
+margin-left: 20px;
+margin-top: 50px;
+border: 1px solid #fff;
+width: 300px;
+padding: 20px;
+}
+
+hr {
+border: 1px dashed #fff;
+}
+
+#navbarshop {
+position: fixed;
+margin-right: 20px;
+background-color: #6599c9;
+font-size: 1.25em;
+width:100%;
+top: 0;
+left: 0;
+}
+
+.invisible_space::before {
+content: ""; 
+display: block; 
+height: 70px;
+}
+
+li {
+display: block;
+list-style-type: none;
+float: right;
+padding-bottom: 1em;
+}
+
+li a {
+color: #fff;
+padding: 15px;
+text-decoration: none;
+}
+
+.blockspace {
+font-size: 25px;
+}	
+
+.blockspace::before {
+    content: ""; 
+    display: block; 
+    height: 130px;
+    margin: -60px 0 0;
+    }
+    
+.blockspace2::before {
+    content: ""; 
+    display: block; 
+    height: 190px;
+    margin: -60px 0 0;
+    }
+
+html {
+scroll-behavior: smooth;
+}
+
+
+

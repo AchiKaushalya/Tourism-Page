@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SVG Site Map</title>
+        <link rel="StyleSheet" href="svg.css">
+    </head>
+    <body style="background-image:url(./Images/bg-Img.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+
+        <!--Navigation Bar-->
+        <div class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.jpeg" alt="logo"></a>
+                <div class="nav-links" id="navLinks">  
+                    <i class="fa fa-close" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="bookus.html">BOOK US</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+        </div>
+            
+        <!--SVG Diagram-->
+
+        <svg id="svgSiteMap" height="740" width="1500">
+            <g id="home">
+                <rect x="100" y="150" rx="3" ry="3" height="40" width="200" stroke-width="3" stroke="white" fill="#0AEA1A" fill-opacity="0.1"/>
+                <text fill="white" font-size="21" x="200" y="175" font-family="brittanic" text-anchor="middle" font-weight="bold">Home</text>
+            </g> 
+
+            <text fill="white" font-size="21" x="150" y="225" font-family="brittanic" text-anchor="middle" font-weight="bold">Booking Us</text>
+            <line x1="70" y1="230" x2="1450" y2="230" stroke-width="4" stroke="white"/>
+
+            <g id="book1">  
+                <rect x="100" y="260" height="40" rx="3" ry="3" width="200" stroke-width="3" stroke="white" fill="#0AEA1A" fill-opacity="0.1"/>
+                <text fill="white" font-size="21" x="200" y="285" font-family="brittanic" text-anchor="middle" font-weight="bold">Single Room</text>
+            </g> 
+            
+            <g id="book2">
+                <rect x="375" y="260" rx="3" ry="3" height="40" width="200" stroke-width="3" stroke="white" fill="#0AEA1A" fill-opacity="0.1"/>
+                <text fill="white" font-size="21" x="475" y="285" font-family="brittanic" text-anchor="middle" font-weight="bold">Double Room</text>
+            </g>
+
+            <g id="book3">
+                <rect x="650" y="260" rx="3" ry="3" height="40" width="200" stroke-width="3" stroke="white" fill="#0AEA1A" fill-opacity="0.1"/>
+                <text fill="white" font-size="21" x="750" y="285" font-family="brittanic" text-anchor="middle" font-weight="bold">VIP Suites</text>
+            </g>
+
+         
+
+            <line x1="70" y1="340" x2="1450" y2="340" stroke-width="3" stroke="white"/>
+
+            
+
+            <line x1="70" y1="450" x2="1450" y2="450" stroke-width="3" stroke="white"/>
+
+            <g id="Gallery">
+                <rect x="100" y="370" rx="3" ry="3" height="40" width="200" stroke-width="3" stroke="white" fill="#0AEA1A" fill-opacity="0.1"/>
+                <text fill="white" font-size="21" x="200" y="395" font-family="brittanic" text-anchor="middle" font-weight="bold">Gallery</text>
+            </g>
+
+            <text fill="white" font-size="21" x="150" y="445" font-family="brittanic" text-anchor="middle" font-weight="bold">Contact</text>
+            <line x1="70" y1="560" x2="1450" y2="560" stroke-width="3" stroke="white"/>
+
+            <g id="QueryForm">
+                <rect x="100" y="480" rx="3" ry="3" height="40" width="200" stroke-width="3" stroke="white" fill="#0AEA1A" fill-opacity="0.1"/>
+                <text fill="white" font-size="21" x="200" y="505" font-family="brittanic" text-anchor="middle" font-weight="bold">Query Form</text>
+            </g>
+
+            <text fill="white" font-size="21" x="150" y="555" font-family="brittanic" text-anchor="middle" font-weight="bold">About</text>
+            
+
+            <g id="SVGSiteMap">
+                <rect x="100" y="590" rx="3" ry="3" height="40" width="200" stroke-width="3" stroke="white" fill="#0AEA1A" fill-opacity="0.1"/>
+                <text fill="white" font-size="21" x="200" y="615" font-family="brittanic" text-anchor="middle" font-weight="bold">SVG SiteMap</text>
+            </g>
+
+            <g id="FAQ">
+                <rect x="375" y="590" rx="3" ry="3" height="40" width="200" stroke-width="3" stroke="white" fill="#0AEA1A" fill-opacity="0.1"/>
+                <text fill="white" font-size="21" x="475" y="615" font-family="brittanic" text-anchor="middle" font-weight="bold">FAQ</text>
+            </g>
+
+            <g id="StudentDetails">
+                <rect x="650" y="590" rx="3" ry="3" height="40" width="200" stroke-width="3" stroke="white" fill="#0AEA1A" fill-opacity="0.1"/>
+                <text fill="white" font-size="21" x="750" y="615" font-family="brittanic" text-anchor="middle" font-weight="bold">Student Details</text>
+            </g>
+        </svg>
+
+        <div class="editorPage">
+            <a id="editorPageA" href="Editor.html">Editor Page</a>
+        </div>
+
+        <div class="additionalContentPage">
+            <a id="additionalContentPageA" href="AdditionalContent.html">Additional Content Page</a>
+        </div>
+
+        <!--SVG Diagram JS-->
+
+        <script>
+            document.getElementById("home").
+            addEventListener("click" , function()
+            {
+                document.location.href="Home.html"
+            });
+
+            document.getElementById("book1").
+            addEventListener("click" , function()
+            {
+                document.location.href="book us.html"
+            });
+
+            document.getElementById("book2").
+            addEventListener("click" , function()
+            {
+                document.location.href="book us.html"
+            });
+
+            document.getElementById("book3").
+            addEventListener("click" , function()
+            {
+                document.location.href="book us.html"
+            });
+
+
+            document.getElementById("Gallery").
+            addEventListener("click" , function()
+            {
+                document.location.href="gallery.html"
+            });
+
+            document.getElementById("QueryForm").
+            addEventListener("click" , function()
+            {
+                document.location.href="contact.html"
+            });
+
+            document.getElementById("SVGSiteMap").
+            addEventListener("click" , function()
+            {
+                document.location.href="svg.html"
+            });
+
+            document.getElementById("FAQ").
+            addEventListener("click" , function()
+            {
+                document.location.href="#"
+            });
+
+            document.getElementById("StudentDetails").
+            addEventListener("click" , function()
+            {
+                document.location.href="Editor.html"
+            });
+        </script>
+    </body>
+</html>

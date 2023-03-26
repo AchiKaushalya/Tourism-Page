@@ -1,0 +1,39 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+	margin-top: 30px;
+	background-color: #000000;
+	background-image: linear-gradient(rgba(60, 60, 71, 0.75),rgba(50, 50, 60, 0.75)),url("images/Villa 3.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed; 
+	background-size: 100% 100%;
+	}
+	
+.content {
+	width: 410px;
+	border: 0 solid white;
+	padding: 10px 20px;
+	margin: auto;
+	
+	}
+
+h1 {			
+	animation-name: heading;
+	animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+	0% {opacity:0;}
+	100% {opacity:1;}
+	}
+	
+@keyframes heading {
+	from {color: #000407;}
+	to {color: #fff;}
+}
+
+span {
+	font-size: 70px;
+}

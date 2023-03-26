@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "Viewport" content = "width = device-width,initial scale=1.0">
+    <title>Thambnail Image</title>
+
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <div class="sub-header">
+    <nav>
+        
+        <a href="index.html"><img src="images/logo.jpeg" alt="logo"></a>
+        <div class="nav-links" id="navLinks">  
+            <i class="fa fa-close" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="book us.html">BOOK US</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</div>
+
+    <!--Pull Down Menu-->
+    <br><br><br><br><br>
+    <h1 id="h1">Gallery</h1>
+
+    <div class="back">
+        <label id="backgroundCLabel" for="backgroundC">Select a background color:</label>
+        <select name="backgroundC" id="backgroundC" onchange="backgroundCChange(this.value)">
+        <option value="#5A9BB6">Blue</option>
+        <option value="#B03D67">Prisma color</option>
+        <option value="#662085">Purple</option>
+        </select>
+    </div>
+
+    <div class="text">
+        <label id="textCLabel" for="textC">Select a text color :</label>
+        <select name="textC" id="textC" onchange="textCChange(this.value)">
+        <option value="white">White</option>
+        <option value="#0AEA1A">Green</option>
+        <option value="#ffea00">Yellow</option>
+        </select>
+    </div>
+
+
+
+
+    <!--Images-->
+
+     <div class="imageSet">
+        <ul class="imageGrid">
+            <li><a href="#img-1"><img id="image1" src="./Images/Ishq-Villa-1.jpg" alt="Ishq-Villa-1" ></a></li>
+            <li><a href="#img-1"><img id="image2" src="./Images/Claughton-House-2.jpg" alt="Claughton-House-2" ></a></li>
+            <li><a href="#img-1"><img id="image3" src="./Images/Villa-Madagala-Kanda-3.jpg" alt="Villa-Madagala-Kanda-3" ></a></li>
+            <li><a href="#img-1"><img id="image4" src="./Images/Elysium-Villa-4.jpg" alt="Elysium-Villa-4" ></a></li>
+            <li><a href="#img-1"><img id="image5" src="./Images/The-Sandals-5.jpg" alt="The-Sandals-5"></a></li> 
+            <li><a href="#img-1"><img id="image6" src="./Images/Villa-Pooja-Kanda-6.jpg" alt="Villa-Pooja-Kanda-6"></a></li> 
+            
+        </ul>
+    </div>
+
+    <!--Preview Image-->
+
+    <div class="previewImage">
+        <img class="image" src="./Images/Ishq-Villa-1.jpg" alt="Ishq-Villa-1">
+    </div>
+
+    <!--Description-->
+    
+    <div class="description">
+        <h3 id="title">Ishq Villa</h3>
+        <p id="imageDescription">Located on the beachfront of Galle, this 4 bedroom luxury villa will bring you a sense of home and comfort. The space combines island-living styles with beachy hues, wooden furnishings, and large spacious rooms.
+            The suites include private garden patios, large indoor and outdoor rain showers and some with an outdoor jacuzzi, you can also sit back and listen to your favourite playlists on the Bose surround sound speakers.
+            </p>
+    </div> 
+    
+    <div class="editorPage">
+        <a id="editorPageA" href="Editor.html">Editor Page</a>
+    </div>
+
+    <div class="additionalContentPage">
+        <a id="additionalContentPageA" href="AdditionalContent.html">Additional Content Page</a>
+    </div>
+
+   <script>
+
+    //drop down menu change
+
+        function backgroundCChange(value){
+                document.body.style.backgroundColor = value;
+        }
+        function textCChange(value) {
+            document.getElementById("h1").style.color = value;
+            document.getElementById("backgroundCLabel").style.color = value;
+            document.getElementById("textCLabel").style.color = value;
+            document.getElementById("title").style.color = value;
+            document.getElementById("imageDescription").style.color = value;
+            document.getElementById("additionalContentPageA").style.color = value;
+            document.getElementById("editorPageA").style.color = value;
+        }
+
+    //Preview Image and change the Description
+
+        document.getElementById("image1").addEventListener("mouseover", function(){
+            document.images[7].src="./Images/Ishq-Villa-1.jpg";
+            document.getElementById("title").innerHTML = "Ishq villa";
+            document.getElementById("imageDescription").innerHTML = "Located on the beachfront of Galle, this 4 bedroom luxury villa will bring you a sense of home and comfort. The space combines island-living styles with beachy hues, wooden furnishings, and large spacious rooms. The suites include private garden patios, large indoor and outdoor rain showers and some with an outdoor jacuzzi, you can also sit back and listen to your favourite playlists on the Bose surround sound speakers. ";
+            
+        });
+        document.getElementById("image2").addEventListener("mouseover", function(){
+            document.images[7].src="./Images/Claughton-House-2.jpg";
+            document.getElementById("title").innerHTML = "Claughton House";
+            document.getElementById("imageDescription").innerHTML = "The people behind Claughton House have perfectly captured and delivered the meaning of an experiential vacation. Designed by Geoffrey Bawa, one of Sri Lanka’s most prominent architects, the villa reflects a perfect blend of traditional Sinhalese design and colonial modern style. Bright, clean and impeccably well-maintained, one could never guess that the house has been about since 1985. One of the activities guests can look forward to at the villa include tagging along with their long-term chef, Ajith, to the local markets where they can indulge their senses in the fresh aroma of produce and spices. With a yoga shala that faces the ocean directly, take some time to relax and unwind by booking in a yoga teacher. After a warm day out and about, book in for a pamper session in the massage room at the villa to recharge and rejuvenate.";
+        });
+        document.getElementById("image3").addEventListener("mouseover", function(){
+            document.images[7].src="./Images/Villa-Madagala-Kanda-3.jpg";
+            document.getElementById("title").innerHTML = "Villa Madagala Kanda";
+            document.getElementById("imageDescription").innerHTML = "Recently renovated, Villa Madagala Kanda exudes a lavish colonial style. Escape from the hustle and bustle of everyday life to this modern and secluded villa located in Galle, Sri Lanka.Laze on the open sun terrace, lounge by the private pool or take a cat nap on the porch, this peaceful getaway destination will rid you of life’s daily stressors. The staff are welcoming and will cater to your every need, while their private personal chef will cater to your meals. Choose from their three-bedroom villa or if there’s just two of you, the beautiful underground apartment will entice.";
+
+        });
+        document.getElementById("image4").addEventListener("mouseover", function(){
+            document.images[7].src="./Images/Elysium-Villa-4.jpg";
+            document.getElementById("title").innerHTML = "Elysium Villa";
+            document.getElementById("imageDescription").innerHTML = "This lavish beachfront retreat is the epitome of tropical luxury fit for a queen. Nestled along the shoreline of Mihiripenna beach and not far from Sri Lanka’s cultural hub, Galle, Elysium Villa has all that you need right at your fingertips. Take a step inside and be greeted by neutral hues, lavish interiors, and authentic Sri Lankan design. The villa has been designed with slanted, wooden ceilings and open-plan living areas for easy movement indoors to outdoors. With a private pool, verdant tropic gardens and the ocean on your doorstep, what more could you ask for in a tropical getaway?";
+
+        });
+        document.getElementById("image5").addEventListener("mouseover", function(){
+            document.images[7].src="./Images/The-Sandals-5.jpg";
+            document.getElementById("title").innerHTML = "The Sandals";
+            document.getElementById("imageDescription").innerHTML = "Situated in a stunning oceanfront location and boasting breezy light-filled interiors, The Sandals is the ideal two-storey tropical oasis to escape to for a little luxury. Large wide open glass doors and windows are fitted in the villa amongst white walls, which are met by plush five-star furnishings and decor. Enjoy a break away from the hustle and bustle fo main town in this seaside villa complete with a private pool and five beautiful en-suite bedrooms. The suite names are summer-inspired, the Whelk and Solarium suites are downstairs with pool access, whilst the Cowrie, Nautilus and Mother Of Pearl are on the second level offering balcony views across the ocean.";
+
+        });
+        document.getElementById("image6").addEventListener("mouseover", function(){
+            document.images[7].src="./Images/Villa-Pooja-Kanda-6.jpg";
+            document.getElementById("title").innerHTML = "Villa Pooja Kanda";
+            document.getElementById("imageDescription").innerHTML = "Situated a few kilometer’s inland from the beach, this minimalist Dutch-colonial style villa is perched on a hilltop surrounded by a magical green landscape. The two-storey villa combines pillared verandas, high-ceilings, and rattan furnishings to form a tranquil villa that is easy on the eyes. Lounge by the poolside that overlooks the serene splendour of the forest for a relaxing day at home. There is plenty of space in the garden for outdoor games and activities with loved ones, or hire a car to visit tea and cinnamon plantations which Sri Lanka is famed for.";
+
+
+        })
+
+
+
+   </script>
+
+
+</body>
+</html>
